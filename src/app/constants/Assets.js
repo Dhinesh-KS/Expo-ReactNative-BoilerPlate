@@ -9,10 +9,14 @@ import {
 } from '@expo/vector-icons';
 
 const Fonts = [
-	{ Poppins_Regular: require('../assets/fonts/Poppins-Regular.ttf') },
-	{ Poppins_Bold: require('../assets/fonts/Poppins-Bold.ttf') },
-	{ Roboto_Regular: require('../assets/fonts/Roboto-Regular.ttf') },
-	{ Roboto_Medium: require('../assets/fonts/Roboto-Medium.ttf') },
+	{ PoppinsRegular: require('../assets/fonts/Poppins-Regular.ttf') },
+	{ PoppinsBold: require('../assets/fonts/Poppins-Bold.ttf') },
+	{ RobotoRegular: require('../assets/fonts/Roboto-Regular.ttf') },
+	{ RobotoMedium: require('../assets/fonts/Roboto-Medium.ttf') },
+	{ OpenSansRegular: require('../assets/fonts/OpenSans-Regular.ttf') },
+	{ OpenSansBold: require('../assets/fonts/OpenSans-Bold.ttf') },
+	{ MontserratRegular: require('../assets/fonts/Montserrat-Regular.ttf') },
+	{ MontserratBold: require('../assets/fonts/Montserrat-Bold.ttf') },
 	Ionicons.font,
 	Foundation.font,
 	FontAwesome.font,

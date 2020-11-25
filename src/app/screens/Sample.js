@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { View, Button, ActivityIndicator, StyleSheet, Text } from 'react-native';
 import { HttpClient } from '../services/http-client/Provider';
+import AuthContext from '../navigation/AuthContext';
 
 const styles = StyleSheet.create({
 	container: {
@@ -13,6 +14,9 @@ const styles = StyleSheet.create({
 
 const Sample = () => {
 	const [isLoading, setIsLoading] = useState(false);
+
+	const { signOut } = useContext(AuthContext);
+
 	const getData = () => {
 		setIsLoading(true);
 		HttpClient.getUsers()
@@ -85,6 +89,7 @@ const Sample = () => {
 			<Button title="Post" onPress={postData} />
 			<Button title="Edit" onPress={editData} />
 			<Text>Check the console</Text>
+			<Button title="SignOut" onPress={() => signOut()} />
 		</View>
 	);
 };

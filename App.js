@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, ActivityIndicator } from 'react-native';
 import { cacheAssetsAsync } from './src/app/helpers/AssetsHandling';
 import { Fonts, Images } from './src/app/constants/Assets';
-import Sample from './src/app/screens/Sample';
+import AppContainer from './src/app/navigation/AppContainer';
 
 const styles = StyleSheet.create({
 	container: {
@@ -39,5 +39,5 @@ export default function App() {
 		);
 	}
 
-	return <Sample />;
+	return <AppContainer />;
 }
