@@ -13,5 +13,9 @@ module.exports = {
 		sourceType: 'module'
 	},
 	plugins: ['react'],
-	rules: {}
+	rules: {
+		'import/prefer-default-export': 'off',
+		'no-console': 'off',
+		'react/jsx-filename-extension': 'off'
+	}
 };

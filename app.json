@@ -2,12 +2,12 @@
   "expo": {
     "name": "Blank",
     "description": "Food Ordering Mobile App",
-    "slug": "expo-rn-base/Blank",
+    "slug": "Blank",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/app/assets/iconsicon.png",
+    "icon": "./src/app/assets/icons/icon.png",
     "splash": {
-      "image": "./src/app/assets/iconssplash.png",
+      "image": "./src/app/assets/icons/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,12 +22,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./src/app/assets/iconsadaptive-icon.png",
+        "foregroundImage": "./src/app/assets/icons/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./src/app/assets/iconsfavicon.png"
+      "favicon": "./src/app/assets/icons/favicon.png"
     }
   }
 }
