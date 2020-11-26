@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Button, ActivityIndicator, StyleSheet, Text } from 'react-native';
+import { useDispatch } from 'react-redux';
 import { HttpClient } from '../services/http-client/Provider';
-import AuthContext from '../navigation/AuthContext';
+import { handleSignOut } from '../redux/index';
 
 const styles = StyleSheet.create({
 	container: {
@@ -14,9 +15,7 @@ const styles = StyleSheet.create({
 
 const Sample = () => {
 	const [isLoading, setIsLoading] = useState(false);
-
-	const { signOut } = useContext(AuthContext);
-
+	const dispatch = useDispatch();
 	const getData = () => {
 		setIsLoading(true);
 		HttpClient.getUsers()
@@ -89,7 +88,7 @@ const Sample = () => {
 			<Button title="Post" onPress={postData} />
 			<Button title="Edit" onPress={editData} />
 			<Text>Check the console</Text>
-			<Button title="SignOut" onPress={() => signOut()} />
+			<Button title="SignOut" onPress={() => dispatch(handleSignOut())} />
 		</View>
 	);
 };

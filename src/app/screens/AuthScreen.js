@@ -1,19 +1,16 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { TextInput, View, Button } from 'react-native';
-import { DeviceStorage } from '../utilities/AsyncStorage';
-import AuthContext from '../navigation/AuthContext';
+import { useDispatch } from 'react-redux';
+import { handleSignUp } from '../redux/index';
 
 const AuthScreen = () => {
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
 
-	const { signIn } = useContext(AuthContext);
+	const dispatch = useDispatch();
 
-	const handleSignIn = () => {
-		if (username && password) {
-			DeviceStorage.setToken('token', 'true');
-			signIn();
-		}
+	const handleSignIn = async () => {
+		await dispatch(handleSignUp(username, password));
 	};
 
 	return (

@@ -1,9 +1,11 @@
 /* eslint-disable react/style-prop-object */
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, ActivityIndicator } from 'react-native';
+import { Provider } from 'react-redux';
 import { cacheAssetsAsync } from './src/app/helpers/AssetsHandling';
 import { Fonts, Images } from './src/app/constants/Assets';
-import AppContainer from './src/app/navigation/AppContainer';
+import AppNavigator from './src/app/navigation/AppNavigator';
+import Store from './src/app/redux/Store';
 
 const styles = StyleSheet.create({
 	container: {
@@ -39,5 +41,9 @@ export default function App() {
 		);
 	}
 
-	return <AppContainer />;
+	return (
+		<Provider store={Store}>
+			<AppNavigator />
+		</Provider>
+	);
 }

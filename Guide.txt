@@ -1,0 +1,2 @@
+Redux Auth Flow - src/app/navigation/AppNavigator
+ContextAPI Based Auth Flow - src/app/navigation/AppContainer
